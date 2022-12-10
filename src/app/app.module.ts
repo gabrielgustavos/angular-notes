@@ -1,16 +1,15 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
+import { DataBidingComponent } from './data-biding/data-biding.component';
+import { DiretivasComponent } from './diretivas/diretivas.component';
+import { ComunicacaoComponentsComponent } from './comunicacao-components/comunicacao-components.component';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule
-  ],
+  declarations: [AppComponent, DataBidingComponent, DiretivasComponent, ComunicacaoComponentsComponent],
+  imports: [BrowserModule, FormsModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

@@ -1,1 +1,16 @@
-/* You can add global styles to this file, and also import other style files */
+html {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+button {
+  width: 200px;
+  height: 70px;
+  cursor: pointer;
+  background-color: red;
+  color: #FFFF;
+  font-size: 1.2rem;
+}

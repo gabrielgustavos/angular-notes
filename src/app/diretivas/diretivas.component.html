@@ -1,0 +1,70 @@
+<h1>Diretivas estruturais</h1>
+
+<h2>ngIf</h2>
+
+<p *ngIf="condition">
+  Irá exibir sempre que a condição for verdadeira, caso contrário essa mensagem
+  irá sumir
+</p>
+
+<p *ngIf="condition; else elseBlock"></p>
+<ng-template #elseBlock>
+  <p>A condição é falsa</p>
+</ng-template>
+
+<!-- Usando evento de click-->
+
+<p *ngIf="conditionClick">True</p>
+
+<p *ngIf="!conditionClick">False</p>
+
+<button (click)="onClick()">Clique para mudar o valor da variavel</button>
+
+<hr />
+
+<h2>ngFor</h2>
+
+<div
+  *ngFor="let item of list; let i = index"
+  (click)="onClickEventList($event)"
+>
+  <p>Posição: {{ i }}</p>
+  <p>
+    {{ item.name }}
+  </p>
+  <p>
+    {{ item.age }}
+  </p>
+</div>
+
+<button (click)="addList()">Adicione mais uma pessoa a lista</button>
+
+<hr />
+
+<h2>ngSwitch</h2>
+
+<div [ngSwitch]="conditionSwitch">
+  <p *ngSwitchCase="1">Caso 1</p>
+  <p *ngSwitchCase="2">Caso 2</p>
+  <p *ngSwitchCase="3">Caso 3</p>
+  <p *ngSwitchDefault>Default</p>
+</div>
+
+<hr />
+
+<h2>ngModel</h2>
+
+<input type="text" [(ngModel)]="nome" />
+<br />
+<br />
+<button (click)="salvar()">Clique aqui para adicionar um livro</button>
+<br />
+<div *ngFor="let livro of livros">
+  <p>
+    {{ livro.name }}
+  </p>
+  <p>
+    {{ livro.age }}
+  </p>
+</div>
+<hr />
